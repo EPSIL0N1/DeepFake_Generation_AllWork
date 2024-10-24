@@ -1,0 +1,51 @@
+AlexNet Overview: AlexNet is a deep convolutional neural network (CNN) architecture that significantly advanced the field of computer vision. Developed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, it won the ImageNet competition in 2012. AlexNet introduced innovations like deeper layers, ReLU activations, dropout, and GPU-based training.
+
+Key Components:
+Input Layer:
+Takes RGB images of size 224x224x3.
+
+Convolutional Layers:
+There are 5 convolutional layers. Convolutions apply filters to the input image or previous layer’s feature maps to extract spatial features.
+
+Uses 11x11, 5x5, and 3x3 kernels.
+Stride is used to control the sliding of the filters over the image.
+Followed by ReLU activation, which accelerates training by introducing non-linearity without saturation.
+Max Pooling:
+Three max-pooling layers reduce spatial dimensions and computation, while retaining important features.
+
+2x2 pooling with a stride of 2.
+Fully Connected Layers:
+After convolution, the feature maps are flattened and passed through 3 fully connected (FC) layers.
+
+FC1 and FC2 have 4096 neurons each.
+ReLU activations are applied after each.
+Dropout:
+Applied after the first two FC layers to prevent overfitting by randomly turning off neurons during training (dropout rate = 0.5).
+
+Output Layer:
+Final FC layer is connected to a softmax classifier that outputs probabilities over 1000 classes (ImageNet dataset).
+
+Training:
+Data Augmentation:
+Techniques like image translations, reflections, and patch extractions are used to prevent overfitting.
+
+GPU Training:
+AlexNet is one of the first models to use GPUs to accelerate training, splitting the model across two GPUs for parallel computation.
+
+Key Innovations:
+ReLU Activation:
+ReLU avoids vanishing gradient issues in deep networks, enabling faster training.
+
+Dropout:
+Prevents overfitting by randomly deactivating neurons during training.
+
+Large Model & GPUs:
+Larger model architecture enabled better feature extraction, and GPU usage sped up training considerably.
+
+Performance:
+Achieved a top-5 error rate of 15.3%, significantly outperforming previous models in the ImageNet competition.
+Architecture Summary:
+5 Convolutional layers
+3 Fully Connected layers
+ReLU activation and Dropout
+Trained on GPUs
